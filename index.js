@@ -27,7 +27,7 @@ client.on("messageCreate", (message) => {
           .setDescription(`${message.author.Description}`)
           .setThumbnail(`${message.author.avatar}`)
           .setTimestamp("By DogoBot")
-      message.Channel.send({embeds: [aboutme]})
+      message.channel.send({embeds: [aboutme]})
   }
 })
 
