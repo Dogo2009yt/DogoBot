@@ -20,6 +20,15 @@ client.on("messageCreate", (message) => {
    message.channel.send("Ciao anche a te")
   )
   
+  
+  if (message.content == "!aboutme") {
+      var aboutme = new Discord.MessageEmbed()
+          .setTitle(`${message.author.username}`)
+          .setDescription(`${message.author.Description}`)
+          .setThumbnail(`${message.author.avatar}`)
+          .setTimestamp("By DogoBot")
+      message.Channel.send({embeds: [aboutme]})
+  }
 })
 
 
