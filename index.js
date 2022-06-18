@@ -160,5 +160,54 @@ client.on("messageCreate", message => {
         interaction.reply({ content: "Ecco il link: https://t.me/dogoclubofficial ", ephemeral: true })
     }
 })
+client.on("messageCreate", message => {
+    if (message.content.startsWith("!kick")) {
+        
+        var utentekick = message.mentions.members.first();
 
+        if(!message.member.permissions.has("KICK_MEMBERS")){
+           message.channel.send("Non hai il permesso")
+           return;
+        }
+        if(!utentekick){
+            message.channel.send("Non hai menzionato nessun utente!")
+            return;
+        }
+        if(!utentekick.kickable){
+           message.channel.send("Non ho il permesso")
+
+        }
+        utentekick.kick()
+        .then(() => {
+            let kick  = new Discord.MessageEmbed()
+                .setTitle(`${utentekick.user.username} kiccato`)
+                .setDescription(`Utente kiccato da ${message.author.toString()}`)
+                message.channel.send({ embeds: [kick] })
+        })  
+        
+ 
+    }
+ })
+ client.on("messageCreate", message => {
+    if (message.content.startsWith("!ban")) {
+        let utente = message.mentions.members.first();
+        if (!message.member.permissions.has('BAN_MEMBERS')) {
+            return message.channel.send('Non hai il permesso');
+        }
+        if (!utente) {
+            return message.channel.send('Non hai menzionato nessun utente');
+        }
+        if (!utente.bannable) {
+            return message.channel.send('Io non ho il permesso');
+        }
+        utente.ban()
+            .then(() => {
+                let ban  = new Discord.MessageEmbed()
+                    .setTitle(`${utente.user.username} bannato`)
+                    .setDescription(`Utente bannato da ${message.author.toString()}`)
+
+                message.channel.send({ embeds: [ban] })
+            })
+    }
+})
 
