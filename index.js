@@ -7,7 +7,6 @@ const MongoClient = require("mongodb").MongoClient;
 var url ="mongodb+srv://Dogo:Diego126126@cluster0.0ui46.mongodb.net/test"
 MongoClient.connect(url , function(err, db){
      var database = db.db("PerDiscord");
-     database.collection("collection").insertOne({id:"2317", username:"Dogo", xp:"112", level:"112", cooldown:"212"})
 })
 
 const { createCanvas, loadImage, registerFont } = require("canvas")
