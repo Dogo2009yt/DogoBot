@@ -1,5 +1,7 @@
+const Discord = require("discord.js")
+
 module.exports ={
-    name:"comando",
+    name:"close",
     execute(message){
         client.on("messageCreate", message => {
             if (message.content == "!close") {
