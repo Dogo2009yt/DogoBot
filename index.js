@@ -3,11 +3,6 @@
     {intents:["GUILDS","GUILD_MEMBERS","GUILD_MESSAGES", "GUILD_VOICE_STATES"]},{ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] }
  );
 
-const MongoClient = require("mongodb").MongoClient;
-var url ="mongodb+srv://Dogo:Diego126126@cluster0.0ui46.mongodb.net/test"
-MongoClient.connect(url , function(err, db){
-     var database = db.db("PerDiscord");
-})
 
 const { createCanvas, loadImage, registerFont } = require("canvas")
 registerFont("./font/roboto.ttf", { family: "roboto" })
