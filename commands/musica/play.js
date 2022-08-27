@@ -3,12 +3,6 @@ const Discord = require("discord.js")
 const { DisTube, Queue } = require("distube")
 const { SpotifyPlugin } = require("@distube/spotify")
 const { DiscordAPIError } = require("discord.js")
-const distube = new DisTube(client, {
-    youtubeDL: false,
-    plugins: [new SpotifyPlugin()],
-    leaveOnEmpty: true,
-    leaveOnStop: true
-})
 
 module.exports ={
     name:"play",

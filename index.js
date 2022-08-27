@@ -10,7 +10,7 @@ registerFont("./font/robotoBold.ttf", { family: "robotoBold" })
 
 const { DisTube } = require("distube")
 const { SpotifyPlugin } = require("@distube/spotify")
-const distube = new DisTube(client, {
+global.distube = new DisTube(client, {
     youtubeDL: false,
     plugins: [new SpotifyPlugin()],
     leaveOnEmpty: true,
