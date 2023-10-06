@@ -47,7 +47,7 @@ module.exports ={
 
     channel.send({ files: [attachment] })
 
-    member.send("Benvenuto/a nella community di Dogo! Buona permanenza nel server!")
+    member.send("Benvenuto/a nella community di Dogo!Leggi le regole e buona permanenza nel server!")
 
 
 })
