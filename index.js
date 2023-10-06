@@ -18,7 +18,7 @@ global.distube = new DisTube(client, {
 })
 
 
- client.login(TOKEN)
+ client.login("OTg1NjQzODc4MDgwMjA0ODUw.GUGWDs.s8KmqO6i30KU-5ZaHp4Sy5ZBixil1yi7FiCkYk")
 
 client.on("ready",() => {
    console.log ("bot online")
