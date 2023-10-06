@@ -17,6 +17,10 @@
     "discord.js": "^13.6.0",
     "distube": "^3.3.2",
     "libsodium-wrappers": "^0.7.9",
+<<<<<<< HEAD
+=======
+    "mongodb": "^4.8.0",
+>>>>>>> abf04969b215f80a91e803efd13643c40f59eb3f
     "package.json": "^2.0.1"
   }
 }
